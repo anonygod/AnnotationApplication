@@ -1,0 +1,12 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':annotation')//引入注解信息
+    implementation 'com.google.auto.service:auto-service:1.0-rc2'//引入自动生成注解配置信息的库
+    // Adds libraries defining annotations to only the compile classpath.
+    implementation 'com.squareup:javapoet:1.7.0'//引入生成代码的库
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"
